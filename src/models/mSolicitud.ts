@@ -1,11 +1,17 @@
 export default class mSolicitud {
     protected _cedula: string = "";
     protected _nombre: string = "";
-    protected _costoBase: number = 5;
-
     constructor(cedula: string, nombre: string) {
         this.cedula = cedula;
         this.nombre = nombre;
+    }
+
+    protected get _costoBase(): number {
+        return 5;
+    }
+
+    protected get _tiempoEmisionBase(): number {
+        return 10;
     }
 
     set cedula(cedula: string) {
@@ -26,6 +32,10 @@ export default class mSolicitud {
 
     calcularMonto(): number {
         return this._costoBase;
+    }
+
+    calcularTiempoEmision(): number {
+        return this._tiempoEmisionBase;
     }
 
     esReposicion(): boolean {

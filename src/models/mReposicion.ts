@@ -30,4 +30,8 @@ export default class mReposicion extends mSolicitud {
     override obtenerTipo(): string {
         return "Reposicion";
     }
+
+    override calcularTiempoEmision(): number {
+        return super.calcularTiempoEmision() + (4 * this._cantExtravioPrevio);
+    }
 }

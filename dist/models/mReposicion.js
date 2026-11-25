@@ -23,5 +23,8 @@ export default class mReposicion extends mSolicitud {
     obtenerTipo() {
         return "Reposicion";
     }
+    calcularTiempoEmision() {
+        return super.calcularTiempoEmision() + (4 * this._cantExtravioPrevio);
+    }
 }
 //# sourceMappingURL=mReposicion.js.map

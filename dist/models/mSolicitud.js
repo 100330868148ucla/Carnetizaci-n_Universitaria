@@ -1,10 +1,15 @@
 export default class mSolicitud {
     _cedula = "";
     _nombre = "";
-    _costoBase = 5;
     constructor(cedula, nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
+    }
+    get _costoBase() {
+        return 5;
+    }
+    get _tiempoEmisionBase() {
+        return 10;
     }
     set cedula(cedula) {
         this._cedula = cedula.trim();
@@ -20,6 +25,9 @@ export default class mSolicitud {
     }
     calcularMonto() {
         return this._costoBase;
+    }
+    calcularTiempoEmision() {
+        return this._tiempoEmisionBase;
     }
     esReposicion() {
         return false;

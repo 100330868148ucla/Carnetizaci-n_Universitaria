@@ -17,6 +17,8 @@ export default class cCarnetizacion {
                     detalleSolicitud,
                     totalRecaudado: this.mCarnetizacion.totalRecaudado(),
                     cantidadReposiciones: this.mCarnetizacion.cantidadReposiciones(),
+                    tiempoTotalEmision: this.mCarnetizacion.tiempoTotalEmision(),
+                    promedioTiempoEmision: this.mCarnetizacion.promedioTiempoEmision()
                 });
             }
         });

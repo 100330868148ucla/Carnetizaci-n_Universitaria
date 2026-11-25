@@ -9,5 +9,12 @@ export default class mNuevo extends mSolicitud {
     obtenerTipo() {
         return "Nuevo";
     }
+    calcularTiempoEmision() {
+        const numCedula = +this._cedula;
+        if (Number.isFinite(numCedula) && numCedula > 30000000) {
+            return super.calcularTiempoEmision() + 5;
+        }
+        return super.calcularTiempoEmision();
+    }
 }
 //# sourceMappingURL=mNuevo.js.map

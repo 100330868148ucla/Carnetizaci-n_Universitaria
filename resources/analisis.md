@@ -42,7 +42,7 @@ MSolicitud
 --------------------------------------------------------- 
 # _cedula: number
 # _nombre: string
-# _costoBase: number
+# get _costoBase(): number
 ---------------------------------------------------------
 + constructor(cedula: number, nombre: string)
 + set/get cedula(): number 
@@ -81,7 +81,9 @@ MReposicion
 Constructor(cedula, nombre):
     this.cedula = cedula        // Pasa por setter
     this.nombre = nombre        // Pasa por setter
-    this._costoBase = 5
+
+protected get _costoBase():
+    return 5
 
 calcularMonto():
     return this._costoBase
